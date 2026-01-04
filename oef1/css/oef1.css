@@ -1,2 +1,133 @@
-/*  Naam: 
+/*  Naam: Bieke Geyskens
 */
+* {
+    box-sizing: border-box;
+    align-content: center;
+}
+
+nav,
+main,
+header {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    text-align: center;
+    flex: 1;
+}
+
+.col-1 {
+    flex: 0 0 100px;
+    flex-shrink: 0;
+}
+
+.col-10 {
+    min-width: 600px;
+}
+
+header {
+    border-color: #808080;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 5px;
+    align-items: center;
+}
+
+header h1 {
+    display: flex;
+    font-size: 50px;
+    margin: 8px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#vergrootglas {
+    display: flex;
+    background-color: #d3d3d3;
+    font-size: 45px;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+}
+
+.frame {
+    display: flex;
+    border: 5px solid #808080;
+    border-radius: 20px;
+    height: 100px;
+}
+
+nav {
+    border-bottom: 5px solid #808080;
+    border-top: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+
+nav a:hover,
+nav a:visited {
+    background-color: lightgrey;
+}
+
+a {
+    color: #808080;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    position: relative;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.game {
+    flex: 0 0 calc(25% - 2rem);
+    max-width: calc(25% - 2rem);
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 900px) {
+    body header h1 {
+        display: none;
+    }
+
+    body header .logo {
+        display: none;
+    }
+
+    body header #vergrootglas {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .games {
+        flex-wrap: wrap;
+    }
+
+    .game {
+        flex: 0 0 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+
+}
